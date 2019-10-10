@@ -44,8 +44,7 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
-      <span class="navlinks">Write a tweeter</span>
-
+     <span class="navlinks"><button class="toggleButton">Write a tweeter <br> <i id='arrow' class="fa fa-angle-double-down"></i></button></span>
     </nav>
 
     <header class="tweetHeader">
@@ -56,6 +55,7 @@
       <div>
           <h2>William Says</h2>
       </div>
+     
   </header>
     
  
@@ -69,7 +69,9 @@
           <p>“The prince of darkness is a gentleman!”</p>
 
           <section class="new-tweet">
+            <p class="errorHandling"></p>
             <form id="tweet-form" action="/tweets/" method="POST">
+          
               <!-- //Specify the correct action and method attributes to the form so that it submits to the correct endpoint/route in your Express app (POST /tweets/). -->
               <textarea id="formTextArea" name="text" placeholder="What does William say?"></textarea>
               <div>
@@ -85,7 +87,7 @@
               <a>@SirIsaac</a>
               </header>
               <p>I have stood on the shoulders of giants</p>
-
+             
 
           
             <hr />

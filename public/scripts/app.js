@@ -2,6 +2,15 @@
 
 // Test / driver code (temporary). Eventually will get this from the server.
 $(document).ready(function() {
+$(".errorHandling").hide();
+
+
+  // scroll function
+  $(".toggleButton").click(function(){
+  $("#tweet-form").slideToggle("slow");
+  });
+  // scroll function 
+  
 
   // Fake data taken from initial-tweets.json
   const data = [
@@ -29,7 +38,6 @@ $(document).ready(function() {
       }
     ]
   
- 
 
 const renderTweets = function(tweets){
   $(`#tweets-container`).empty();
@@ -69,9 +77,9 @@ loadTweets();
   // if statements 140>alert && ===0
   console.log(text.length); 
   if (text.length === 0){
-    alert("Error: Please enter a tweet");
+    $(".errorHandling").html("&#9888 You have no entered a Tweet &#9888").show().delay(5000).fadeOut();;
   } else if (text.length > 140){
-    alert("Error: Over 140 character count");
+    $(".errorHandling").html("&#9888You have entered more than 140 characters.&#9888").show().delay(5000).fadeOut();
   } else {
   $.ajax(`/tweets/`, {method: 'POST', data: tweetBody})
   .then(function(){

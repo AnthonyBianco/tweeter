@@ -68,6 +68,15 @@ article hr {
   border-color: black;
   
 }
+
+.errorHandling{
+  border:solid;
+  color:red;
+  text-align:center;
+  font-size: large;
+  font-weight: bold;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
