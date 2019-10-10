@@ -6,6 +6,21 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    
+    <!-- HTML Bungee & Sans Pro from Google-->
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,700i&display=swap" rel="stylesheet">
+
+    <!-- Nav css-->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+
+    <!-- Main css-->
+    <link rel="stylesheet" href="/styles/main.css" type="text/css" />
+
+    <!-- Header css -->
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+
+    <!-- new-tweet -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -15,6 +30,13 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+
+    <!-- Composer-Char-Counter -->
+    <script type="text/javascript"  src="/scripts/composer-char-counter.js"></script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
@@ -22,10 +44,67 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
+      <span class="navlinks">Write a tweeter</span>
+
     </nav>
 
-    <!-- Page-specific (main) content here -->
+    <header class="tweetHeader">
+      <div>
+          <img src="/images/shakespeare-getty.png"> 
+      </div>
+      <br>
+      <div>
+          <h2>William Says</h2>
+      </div>
+  </header>
+    
+ 
     <main class="container">
+         <!-- It should be only 90% of the width of its parent element
+         It should be center aligned to the body
+         It should have the same colour background as the <body> element -->
+          
+          <p>"The devil can cite Scripture for his purpose."</p>
+          <p>“Many a true word hath been spoken in jest.”</p>
+          <p>“The prince of darkness is a gentleman!”</p>
+
+          <section class="new-tweet">
+            <form id="tweet-form" action="/tweets/" method="POST">
+              <!-- //Specify the correct action and method attributes to the form so that it submits to the correct endpoint/route in your Express app (POST /tweets/). -->
+              <textarea id="formTextArea" name="text" placeholder="What does William say?"></textarea>
+              <div>
+                <input type="submit" value="Tweet">
+                  <span class="counter">140</span>
+                </div>
+            </form>
+            
+            
+            <section id="tweets-container">
+              <article class="tweet">
+              <header class="secondHeader"><img src="https://i.imgur.com/73hZDYK.png" /> Newton
+              <a>@SirIsaac</a>
+              </header>
+              <p>I have stood on the shoulders of giants</p>
+
+
+          
+            <hr />
+            <footer>10 days ago
+
+              <div class="icons">
+
+                  <i class="fa fa-flag"></i>
+                    <i class="fa fa-heart"></i>
+                      <i class="fa fa-refresh"></i>
+
+              </div>
+            </footer>
+            
+            </article>
+            </section>
+              <br>
+          </section>
+
     </main>
 
   </body>

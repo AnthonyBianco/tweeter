@@ -1,0 +1,50 @@
+.redText {
+  color: crimson;
+}
+
+.new-tweet textarea {
+  font-family: 'Bungee', bold;
+  background-color: white;
+  border: none;
+  border-bottom: 5px solid black;
+  margin-bottom: 10px;
+
+  
+}
+
+.new-tweet input {
+
+  background-color: #3B5999;
+  border: 0px;
+  font-family: 'Bungee', cursive;
+  color: white;
+  
+}
+
+.new-tweet  input.value {
+  padding-left: 5em;
+  
+}
+
+.new-tweet span.counter {
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+form div {
+  display:flex;
+  justify-content: space-between; 
+}
+
+/* <section class="new-tweet">
+<form action="/tweets/" method="POST">
+  <!-- //Specify the correct action and method attributes to the form so that it submits to the correct endpoint/route in your Express app (POST /tweets/). -->
+  <textarea name="text" placeholder="What are you humming about?"></textarea>
+    <input type="submit" value="Tweet">
+      <span class="counter">140</span>
+</form>
+</section> */

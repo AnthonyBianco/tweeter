@@ -15,11 +15,60 @@ html {
  */
 
 body {
+  font-family: 'Source Sans Pro', sans-serif;
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: white;
   font-size: 24px;
+
 }
 
+.container {
+  margin: 0px auto;
+  width: 90%;
+  background-color: inherit;
+  color: 40px;
+  overflow-wrap: break-word;
+}
+
+img {
+  width: 35%;
+  padding-top: 1em;
+
+}
+
+.tweet{
+    width: 100%;
+    border-style: solid;
+    padding: 0.5em;
+    margin-bottom: 20px;
+}
+
+article:hover{
+  font-weight: 600;
+  box-shadow:5px 10px #888888; 
+}
+
+article img {
+  width: 3%;
+  vertical-align: text-bottom;
+}
+
+article header a {
+  opacity: 0.5;
+  padding-top: 0.5em;
+  float: right;
+
+}
+
+.icons {
+  float: right;
+}
+
+article hr {
+  border-color: black;
+  
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
