@@ -8,13 +8,17 @@ The background-image should be a transparent pattern. Feel free to use this tool
 
 
 .tweetHeader {
-  padding-top: 120px;
-  width: 100%;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+  width: 50%;
+  height: 70%;
   background-color: #8a008a;
 background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank
+ you! */
   background-color: white;
-  height: 520px;
   font-family: 'Source Sans Pro', sans-serif;
   color: #545149;
   font-size: 24px;

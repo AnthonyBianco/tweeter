@@ -1,83 +1,137 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
 
 /*
- * Global layout stuff
+ * SMALL SCREEN
  */
 
-body {
-  font-family: 'Source Sans Pro', sans-serif;
-  color: #545149;
-  background-color: white;
-  font-size: 24px;
 
-}
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
 
-.container {
-  margin: 0px auto;
-  width: 90%;
-  background-color: inherit;
-  color: 40px;
-  overflow-wrap: break-word;
-}
-
-img {
-  width: 35%;
-  padding-top: 1em;
-
-}
-
-.tweet{
-    width: 100%;
-    border-style: solid;
-    padding: 0.5em;
-    margin-bottom: 20px;
-}
-
-article:hover{
-  font-weight: 600;
-  box-shadow:5px 10px #888888; 
-}
-
-article img {
-  width: 3%;
-  vertical-align: text-bottom;
-}
-
-article header a {
-  opacity: 0.5;
-  padding-top: 0.5em;
-  float: right;
-
-}
-
-.icons {
-  float: right;
-}
-
-article hr {
-  border-color: black;
+  .superContainer{
+    display:flex;
+    justify-content:space-between;
+    margin: 0 auto;
+    
+  }
   
+  .secondHeader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+.secondHeader p {
+  margin: 0;
 }
 
-.errorHandling{
-  border:solid;
-  color:red;
-  text-align:center;
-  font-size: large;
-  font-weight: bold;
+.secondHeader img {
+  width: 50px;
+  padding: 0px;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+.secondHeader a {
+  padding: 0px;
+}
 
+@media only screen and (max-width: 734px) {
+
+.superContainer{
+  flex-direction: column;
+}
+}
+  body {
+    margin:0px;
+    flex-direction: column;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #545149;
+    background-color: white;
+    font-size: 24px;
+  }
+
+  main {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  .tweetHeader {
+
+    border-radius: 5px;
+    background-color: #8a008a;
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank
+   you! */
+    background-color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #545149;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  img {
+    width: 20%;
+    padding-top: 1em;
+  }
+
+  
+  .tweet{
+      width: 100%;
+      border-style: solid;
+      padding: 0.5em;
+      margin-bottom: 20px;
+  }
+  
+  article:hover{
+    font-weight: 600;
+    box-shadow:5px 10px #888888; 
+  }
+  
+  article img {
+    width: 10%;
+    vertical-align: text-bottom;
+  }
+  
+  article header a {
+    opacity: 0.5;
+    padding-top: 0.5em;
+    float: right;
+  }
+  
+  
+  article hr {
+    border-color: black;
+    
+  }
+  
+  
+  footer {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    
+  }
+  
+  .icons{
+    align-self: flex-end;
+  }
+  
+  .container {
+  
+    width: 90%;
+    background-color: inherit;
+    color: 40px;
+    overflow-wrap: break-word;
+  }
+
+  .errorHandling{
+    border:solid;
+    color:red;
+    text-align:center;
+    font-size: large;
+    font-weight: bold;
+  }
+  
+  

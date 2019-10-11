@@ -77,7 +77,7 @@ loadTweets();
   // if statements 140>alert && ===0
   console.log(text.length); 
   if (text.length === 0){
-    $(".errorHandling").html("&#9888 You have no entered a Tweet &#9888").show().delay(5000).fadeOut();;
+    $(".errorHandling").html("&#9888 You have not entered a Tweet &#9888").show().delay(5000).fadeOut();
   } else if (text.length > 140){
     $(".errorHandling").html("&#9888You have entered more than 140 characters.&#9888").show().delay(5000).fadeOut();
   } else {
@@ -100,13 +100,15 @@ const escape =  function(str) {
 
 const createTweetElement = function (tweetData) {
   return `<article class="tweet">
-  <header class="secondHeader"><img src="${tweetData.user.avatars}" /> ${tweetData.user.name}
+  <header class="secondHeader">
+  <img src="${tweetData.user.avatars}" />
+  <p>${tweetData.user.name}</p>
   <a>${tweetData.user.handle}</a>
   </header>
   <p>${escape(tweetData.content.text)}</p>
 
 <hr />
-<footer>${new Date(tweetData.created_at)}
+<footer>${moment(tweetData.created_at).fromNow()}
 
   <div class="icons">
 
